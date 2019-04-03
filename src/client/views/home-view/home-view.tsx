@@ -94,7 +94,7 @@ export class HomeView extends React.Component<HomeViewProps, HomeViewState> {
 
     return <div className="home-view">
       <HomeHeaderBar
-        user={user}
+        user={{　id: "1", displayName: "liguifa", email: "liguifa@zuoyebang.com", allow: null　}}
         onNavClick={onNavClick}
         customization={customization}
         title={STRINGS.home}

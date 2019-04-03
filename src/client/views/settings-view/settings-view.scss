@@ -1,0 +1,48 @@
+@import '../../imports';
+
+.settings-view {
+	@import '../../utils/styles/grid';
+}
+
+.home-header-bar {
+	@include pin-top($header-height);
+}
+
+.container {
+	@include unpin-top($header-height);
+	overflow-y: auto;
+	padding: 0 10%;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	height: 100%;
+	width: 100%;
+	padding: 0px;
+}
+	
+.settings-view-sider {
+	width: 170px;
+	background: #5dc3ef;
+	height: 100%;
+	padding: 10px 5px 0px;
+}
+
+.settings-view-sider-button {
+	background: transparent;
+	width: 100%;
+	height: 35px;
+	text-align: left !important;
+}
+
+.settings-view-sider-button:hover {
+	background: #1ea3e6;
+}
+
+.settings-view-sider-active {
+	background: #1ea3e6;
+}
+
+.setting-view-body {
+	width: calc(100% - 170px);
+	height: 100px;
+}

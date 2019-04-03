@@ -34,6 +34,7 @@ import { replaceHash } from "../../utils/url/url";
 import { CubeView } from "../../views/cube-view/cube-view";
 import { HomeView } from "../../views/home-view/home-view";
 import { NoDataView } from "../../views/no-data-view/no-data-view";
+import { SettingsView } from "../../views/settings-view/settings-view";
 import "./turnilo-application.scss";
 
 export interface TurniloApplicationProps {
@@ -55,10 +56,11 @@ export interface TurniloApplicationState {
   cubeViewSupervisor?: ViewSupervisor;
 }
 
-export type ViewType = "home" | "cube" | "no-data";
+export type ViewType = "home" | "cube" | "no-data" | "settings";
 
 export const HOME: ViewType = "home";
 export const CUBE: ViewType = "cube";
+export const SETTINGS: ViewType = "settings";
 export const NO_DATA: ViewType = "no-data";
 
 const transitionTimeout = { enter: 500, exit: 300 };
@@ -192,6 +194,8 @@ export class TurniloApplication extends React.Component<TurniloApplicationProps,
     if (!dataCubes || !dataCubes.length) return NO_DATA;
 
     if (!viewType || viewType === HOME) return HOME;
+
+    if(!viewType || viewType === SETTINGS) return SETTINGS;
 
     if (viewType === NO_DATA) return NO_DATA;
 
@@ -370,6 +374,9 @@ export class TurniloApplication extends React.Component<TurniloApplicationProps,
           transitionFnSlot={this.sideBarHrefFn}
           supervisor={cubeViewSupervisor}
         />;
+
+      case SETTINGS:
+        return <SettingsView user={user} />;
 
       default:
         throw new Error("unknown view");

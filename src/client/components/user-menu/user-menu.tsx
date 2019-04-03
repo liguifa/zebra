@@ -52,6 +52,11 @@ export class UserMenu extends React.Component<UserMenuProps, UserMenuState> {
           className="display-name"
         >{user.displayName}</li>
         <li
+          className="settings"
+        ><a href={customization.getSettingsHref()}>
+          <div>{STRINGS.settings}</div>
+        </a></li>
+        <li
           className="logout"
         ><a href={customization.getLogoutHref()}>
           <div>{STRINGS.logout}</div>

@@ -66,6 +66,7 @@ export class Customization implements Instance<CustomizationValue, Customization
   ];
 
   static DEFAULT_LOGOUT_HREF = "logout";
+  static SETTINGS_HREF = "#settings";
 
   static isCustomization(candidate: any): candidate is Customization {
     return candidate instanceof Customization;
@@ -107,6 +108,7 @@ export class Customization implements Instance<CustomizationValue, Customization
   public title: string;
   public logoutHref: string;
   public urlShortener: UrlShortener;
+  public settingsHref: string;
 
   constructor(parameters: CustomizationValue) {
     this.title = parameters.title || null;
@@ -187,6 +189,10 @@ export class Customization implements Instance<CustomizationValue, Customization
 
   public getLogoutHref() {
     return this.logoutHref || Customization.DEFAULT_LOGOUT_HREF;
+  }
+
+  public getSettingsHref() {
+    return this.settingsHref || Customization.SETTINGS_HREF;
   }
 }
 

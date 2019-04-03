@@ -106,7 +106,7 @@ export const STRINGS: any = {
   generalSettings: "General settings",
   goToUrl: "Go to URL",
   granularity: "Granularity",
-  home: "Turnilo",
+  home: "斑马",
   include: "Include",
   infoAndFeedback: "Info & Feedback",
   intersection: "Intersection",
@@ -165,7 +165,8 @@ export const STRINGS: any = {
   displayViewDefinition: "Display view definition",
   viewDefinition: "View definition",
   viewDefinitionSubtitle: "View definition for mkurl",
-  yes: "Yes"
+  yes: "Yes",
+  connections: "数据源"
 };
 
 // Data cubes introspection strategies

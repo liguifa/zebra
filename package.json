@@ -1,12 +1,12 @@
 {
-  "name": "turnilo",
+  "name": "zebra",
   "version": "1.14.0",
   "description": "A web-based exploratory visualization UI for Druid.io",
   "keywords": [
     "imply",
     "data",
     "explorer",
-    "turnilo",
+    "zebra",
     "swiv",
     "visualization",
     "druid"
